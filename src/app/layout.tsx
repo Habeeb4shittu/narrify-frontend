@@ -4,8 +4,8 @@ import "./globals.css";
 
 const quantico = Quantico({
   weight: ["400", "700"],
-  variable: "--font-quantico",
   subsets: ["latin"],
+  display: "swap",
 });
 
 export const metadata: Metadata = {
@@ -17,7 +17,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html
       lang="en"
-      className={`${quantico.variable} h-full antialiased`}
+      className={`${quantico.className} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
